@@ -1,0 +1,27 @@
+hertz:
+  address: "127.0.0.1:8081"
+
+mysql:
+  address: "127.0.0.1:3306"
+  database: agent_memory_test
+  username: agent_memory
+  password: agent_memory_local
+
+milvus:
+  address: "http://127.0.0.1:19530"
+  database: default
+  collection: memory_nodes_test
+  token: ""
+
+outbox:
+  poll_interval: 1s
+  process_timeout: 30s
+  lease_duration: 60s
+  max_attempts: 5
+  retry_base: 2s
+  retry_max: 2m
+
+embedding:
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  model: text-embedding-v4
+  dimensions: 1024

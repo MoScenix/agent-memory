@@ -1,0 +1,27 @@
+hertz:
+  address: ":8080"
+
+mysql:
+  address: "" # AGENT_MEMORY_MYSQL_ADDRESS
+  database: agent_memory
+  username: "" # AGENT_MEMORY_MYSQL_USERNAME
+  password: "" # AGENT_MEMORY_MYSQL_PASSWORD
+
+milvus:
+  address: "" # AGENT_MEMORY_MILVUS_ADDRESS
+  database: default
+  collection: memory_nodes
+  token: "" # AGENT_MEMORY_MILVUS_TOKEN
+
+outbox:
+  poll_interval: 1s
+  process_timeout: 30s
+  lease_duration: 60s
+  max_attempts: 5
+  retry_base: 2s
+  retry_max: 2m
+
+embedding:
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  model: text-embedding-v4
+  dimensions: 1024
